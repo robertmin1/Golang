@@ -1,6 +1,6 @@
 package main
 
-// example of calling shell command
+// Calling shell command
 
 // cd to a given dir
 // call ls -al
@@ -8,6 +8,7 @@ package main
 
 import "fmt"
 import "os"
+// To make a system call, we use import "os/exec"
 import "os/exec"
 
 func main() {
@@ -21,7 +22,8 @@ func main() {
 	var cmdName = "ls"
 
 	var cmd = exec.Command(cmdName, "-a", "-l")
-
+	
+	// We run it, wait and get output
 	output, err := cmd.Output()
 	if err != nil {
 		panic(err)
