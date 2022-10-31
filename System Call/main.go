@@ -13,7 +13,7 @@ import "os/exec"
 
 func main() {
 
-	var dirToRun = "/Users/xah/web/"
+	var dirToRun = "/root"
 	var err = os.Chdir(dirToRun)
 	if err != nil {
 		panic(err)
